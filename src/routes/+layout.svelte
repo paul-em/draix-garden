@@ -34,7 +34,7 @@
 		<div class="flex justify-around items-center h-16">
 			{#each navItems as item}
 				<button
-					onclick={() => goto(item.path)}
+					onclick={() => goto(item.path === '/' ? (base || '/') : `${base}${item.path}`)}
 					class="flex flex-col items-center justify-center w-full h-full transition-colors"
 					class:text-primary-600={isActive(item.path)}
 					class:text-gray-500={!isActive(item.path)}
