@@ -92,14 +92,28 @@ The built files will be in the `build/` directory, ready to be deployed to any s
 
 ## Deployment
 
-### Static Hosting
+### GitHub Pages (Configured!) 🚀
 
-This app can be deployed to any static hosting service:
+This project is configured for **automatic deployment** to GitHub Pages!
+
+**Live URL:** https://paul-em.github.io/draix-garden/
+
+To deploy:
+1. Go to your repo settings → Pages
+2. Set source to "GitHub Actions"
+3. Push to `main` branch - done!
+
+See [GITHUB_PAGES_SETUP.md](./GITHUB_PAGES_SETUP.md) for detailed instructions.
+
+### Other Static Hosting Options
+
+This app can also be deployed to:
 
 - **Netlify:** Drag and drop the `build/` folder
 - **Vercel:** Connect your git repository
-- **GitHub Pages:** Push to `gh-pages` branch
 - **Firebase Hosting:** Use `firebase deploy`
+
+See [DEPLOYMENT.md](./DEPLOYMENT.md) for complete deployment guide.
 
 ### Mobile Installation
 
