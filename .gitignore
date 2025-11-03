@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build Output
+build/
+.svelte-kit/
+dist/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Editor
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Testing
+coverage/
+
+# Misc
+.vercel
+.netlify
+.firebase

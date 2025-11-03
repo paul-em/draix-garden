@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#16a34a" rx="64"/>
+  <g transform="translate(256, 256)">
+    <!-- Leaf -->
+    <path d="M-40,-80 Q-80,-40 -80,0 Q-80,40 -40,80 Q0,40 0,0 Q0,-40 -40,-80 Z" fill="#dcfce7"/>
+    <path d="M40,-80 Q80,-40 80,0 Q80,40 40,80 Q0,40 0,0 Q0,-40 40,-80 Z" fill="#bbf7d0"/>
+    <!-- Stem -->
+    <rect x="-8" y="40" width="16" height="100" fill="#15803d" rx="8"/>
+    <!-- Root indicator -->
+    <circle cx="0" cy="150" r="12" fill="#166534"/>
+  </g>
+</svg>
+
