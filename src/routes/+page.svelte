@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { goto } from '$app/navigation';
+  import { base } from '$app/paths';
   import PlantCard from '$lib/components/PlantCard.svelte';
   import { plantsStore } from '$lib/stores/plants.svelte';
 
@@ -18,11 +19,11 @@
   );
 
   function goToAddPlant() {
-    goto('/plants/add');
+    goto(`${base}/plants/add`);
   }
 
   function goToPlant(id: string) {
-    goto(`/plants/${id}`);
+    goto(`${base}/plants/${id}`);
   }
 </script>
 

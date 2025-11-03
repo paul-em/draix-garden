@@ -1,5 +1,6 @@
 <script lang="ts">
   import { goto } from '$app/navigation';
+  import { base } from '$app/paths';
   import type { ChatMessage } from '$lib/db/schema';
   import PlantForm from '$lib/components/PlantForm.svelte';
   import AIChat from '$lib/components/AIChat.svelte';
@@ -81,7 +82,7 @@
       await tasksStore.addMultipleTasks(tasks);
 
       // Navigate to plant detail page
-      goto(`/plants/${plant.id}`);
+      goto(`${base}/plants/${plant.id}`);
     } catch (err) {
       error = err instanceof Error ? err.message : 'Failed to create plant';
       console.error('Failed to create plant:', err);
@@ -99,7 +100,7 @@
         plantImageFile
       );
       
-      goto(`/plants/${plant.id}`);
+      goto(`${base}/plants/${plant.id}`);
     } catch (err) {
       error = err instanceof Error ? err.message : 'Failed to create plant';
       console.error('Failed to create plant:', err);
@@ -117,7 +118,7 @@
     if (step === 'chat' && !isLoading) {
       step = 'form';
     } else {
-      goto('/');
+      goto(base || '/');
     }
   }
 
@@ -175,7 +176,7 @@
       <div class="card">
         <PlantForm
           onSubmit={handlePlantFormSubmit}
-          onCancel={() => goto('/')}
+          onCancel={() => goto(base || '/')}
           submitLabel="Continue"
         />
 

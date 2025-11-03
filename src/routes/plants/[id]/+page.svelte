@@ -2,6 +2,7 @@
   import { onMount } from 'svelte';
   import { page } from '$app/stores';
   import { goto } from '$app/navigation';
+  import { base } from '$app/paths';
   import type { Plant, Task } from '$lib/db/schema';
   import { plantsStore } from '$lib/stores/plants.svelte';
   import { tasksStore } from '$lib/stores/tasks.svelte';
@@ -118,12 +119,12 @@
   async function confirmDeletePlant() {
     if (plant) {
       await plantsStore.deletePlant(plant.id);
-      goto('/');
+      goto(base || '/');
     }
   }
 
   function goBack() {
-    goto('/');
+    goto(base || '/');
   }
 </script>
 
