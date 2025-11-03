@@ -2,6 +2,7 @@
 	import '../app.css';
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
+	import { base } from '$app/paths';
 
 	let { children } = $props();
 
@@ -11,7 +12,8 @@
 	];
 
 	function isActive(path: string): boolean {
-		return $page.url.pathname === path;
+		const fullPath = path === '/' ? base || '/' : `${base}${path}`;
+		return $page.url.pathname === fullPath;
 	}
 </script>
 
